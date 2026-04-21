@@ -243,7 +243,7 @@ Fisherman-Tracker/
 
 ## 👤 Author
 
-**Dj** — [github.com/genocide-dj](https://github.com/genocide-dj)
+**Aman Kumar** — [github.com/genocide-dj](https://github.com/genocide-dj)
 
 ---
 
