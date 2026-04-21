@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  fisherman-tracker:
+    build: .
+    container_name: fisherman-tracker
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data          # mount your videos here
+      - ./outputs:/app/outputs    # results written here
+      - ./models:/app/models      # YOLO weights cache
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  # Optional: GPU variant — uncomment if you have NVIDIA GPU + nvidia-docker2
+  # fisherman-tracker-gpu:
+  #   build: .
+  #   container_name: fisherman-tracker-gpu
+  #   ports:
+  #     - "8501:8501"
+  #   volumes:
+  #     - ./data:/app/data
+  #     - ./outputs:/app/outputs
+  #     - ./models:/app/models
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: 1
+  #             capabilities: [gpu]
+  #   restart: unless-stopped

@@ -1,0 +1,34 @@
+# Outputs
+outputs/
+logs/
+
+# Large data files
+data/videos/
+models/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Temp fix/debug scripts
+fix_*.py
+debug_*.py
+diagnose*.py
+inspect_*.py
+check_reid.py
+
+# Environment
+.conda/
+.env
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
